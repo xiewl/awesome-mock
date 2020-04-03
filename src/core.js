@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const upload = require('multer')();
 const axios = require('axios');
 const querystring = require('querystring');
-const ROOT_DIR = path.join(__dirname, '../../../');
+const ROOT_DIR = path.join(__dirname, '../../../../');
 let PORT;
 let MOCK_DIR;
 let LISTEN;

@@ -1,6 +1,6 @@
 {
   "name": "@kc/mock",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "mock server",
   "author": "willen.xie@kupogroup.com",
   "main": "src/index.js",
