@@ -2,7 +2,7 @@
   "name": "@kc/mock",
   "version": "0.1.0",
   "description": "mock server",
-  "author": "wille.xie@kucoin.com",
+  "author": "willen.xie@kupogroup.com",
   "main": "src/index.js",
   "bin": {
     "mock-server": "src/core.js"
