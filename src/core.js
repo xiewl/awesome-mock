@@ -8,6 +8,7 @@ const bodyParser = require('body-parser');
 const upload = require('multer')();
 const axios = require('axios');
 const querystring = require('querystring');
+const pathToRegexp = require('path-to-regexp');
 const ROOT_DIR = path.join(__dirname, '../../../../');
 let PORT;
 let MOCK_DIR;
@@ -144,7 +145,27 @@ function mockMode() {
       console.log('query', query);
       console.log('body', body);
 
-      const responseBody = apiList[`${method} ${url}`] || apiList[url] || fallbackApiList[`${method} ${url}`] || fallbackApiList[url];
+      let responseBody = null;
+      [apiList, fallbackApiList].forEach(list => {
+        if (!responseBody) {
+          for (let one in list) {
+            if (list.hasOwnProperty(one)) {
+              let split = one.split(' ');
+              if (split.length === 2) {
+                const reg = pathToRegexp(split[1]);
+                if (reg.exec(url) && split[0].toUpperCase() === method.toUpperCase()) {
+                  responseBody = list[one];
+                }
+              } else {
+                const reg = pathToRegexp(split[0]);
+                if (reg.exec(url)) {
+                  responseBody = list[one];
+                }
+              }
+            }
+          }
+        }
+      });
       if (responseBody) {
         if (typeof responseBody === 'function') {
           try {
