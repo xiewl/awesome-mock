@@ -27,7 +27,8 @@ function getConfig() {
   let config = {};
   const {configPath, port, mockPath, listen, useTempMock} = process.env;
   try {
-    config = require(path.join(ROOT_DIR, configPath || '/.mock-server.js')).default;
+    const res = require(path.join(ROOT_DIR, configPath || '/.mock-server.js'));
+    config = res.default || res;
   } catch (e) {
     console.log(e);
   }
