@@ -9,7 +9,7 @@ const upload = require('multer')();
 const axios = require('axios');
 const querystring = require('querystring');
 const pathToRegexp = require('path-to-regexp');
-const ROOT_DIR = path.join(__dirname, '../../../../');
+const ROOT_DIR = path.join(__dirname, '../../../');
 let PORT;
 let MOCK_DIR;
 let LISTEN;

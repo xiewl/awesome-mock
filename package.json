@@ -1,6 +1,6 @@
 {
   "name": "awesome-mock",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "mock server",
   "author": "wndwl@vip.qq.com",
   "main": "src/index.js",
