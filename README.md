@@ -1,4 +1,4 @@
-# @kc/mock项目说明
+# awesome-mock项目说明
 
 ### 目录结构
 ```
@@ -8,7 +8,7 @@ src                             # 项目源码目录
   |--tool.js                    # 工具文件
 ```
 
-### 关于@kc/mock
+### 关于awesome-mock
 - 提供Listen和Mock两种使用模式，通过配置文件切换。
 - 接入[Mock.js](http://mockjs.com/examples.html)，支持动态生成Mock数据
 - Mock返回值除基本格式外，还支持自定义函数。可用于设置响应头数据
@@ -38,11 +38,11 @@ export default {
 `_temp`目录下的接口数据作为fallback。
 
 ### 如何使用
-- `yarn add @kc/mock`
+- `yarn add awesome-mock`
 - 项目内创建`.mock-server.js`配置文件
 - 创建mock目录与mock文件
 ```
-const { Mock, Tool } = require('@kc/mock');
+const { Mock, Tool } = require('awesome-mock');
 
 module.exports = {
   'GET /timestamp1': {

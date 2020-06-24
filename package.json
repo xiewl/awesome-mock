@@ -1,8 +1,8 @@
 {
-  "name": "@kc/mock",
-  "version": "0.1.3",
+  "name": "awesome-mock",
+  "version": "2.0.0",
   "description": "mock server",
-  "author": "willen.xie@kupogroup.com",
+  "author": "wndwl@vip.qq.com",
   "main": "src/index.js",
   "bin": {
     "mock-server": "src/core.js"
